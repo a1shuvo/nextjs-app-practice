@@ -28,9 +28,7 @@ export default function RootLayout({ children }) {
         <Navbar></Navbar>
 
         {/* Main Content */}
-        <main className="flex-1 min-h-[calc(100vh-7rem)] place-content-center text-center">
-          {children}
-        </main>
+        <main className="flex-1 min-h-[calc(100vh-7rem)]">{children}</main>
 
         {/* Footer */}
         <Footer></Footer>
