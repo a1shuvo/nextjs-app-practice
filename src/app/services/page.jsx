@@ -40,8 +40,8 @@ const ServicesPage = () => {
               <Image
                 src={service.service_image}
                 alt={service.service_name}
-                layout="fill"
-                objectFit="cover"
+                fill
+                className="object-cover"
               />
             </div>
             <div className="p-4">

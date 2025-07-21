@@ -11,27 +11,31 @@ const Navbar = () => {
     { name: "About", path: "/about" },
   ];
 
-  return (
-    <nav className="h-16 bg-amber-100 flex justify-center items-center">
-      <ul className="flex gap-6 text-xl">
-        {navLinks.map((link) => (
-          <li key={link.name}>
-            <Link
-              href={link.path}
-              className={`px-3 py-1 rounded transition-colors
+  if (!pathname.includes("dashboard")) {
+    return (
+      <nav className="h-16 bg-amber-100 flex justify-center items-center">
+        <ul className="flex gap-6 text-xl">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.path}
+                className={`px-3 py-1 rounded transition-colors
                 ${
                   pathname === link.path
                     ? "bg-amber-500 text-white"
                     : "hover:bg-amber-300 hover:text-white"
                 }`}
-            >
-              {link.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    );
+  } else {
+    return <></>;
+  }
 };
 
 export default Navbar;

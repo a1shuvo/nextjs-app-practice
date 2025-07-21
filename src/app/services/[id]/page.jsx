@@ -40,8 +40,8 @@ const ServiceDetailsPage = async ({ params }) => {
         <Image
           src={service.service_image}
           alt={service.service_name}
-          layout="fill"
-          objectFit="cover"
+          fill
+          className="object-cover"
         />
       </div>
       <p className="text-gray-700 text-lg">{service.service_description}</p>
