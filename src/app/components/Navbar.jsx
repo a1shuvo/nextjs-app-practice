@@ -23,7 +23,7 @@ const Navbar = () => {
                 ${
                   pathname === link.path
                     ? "bg-amber-500 text-white"
-                    : "hover:bg-amber-300 hover:text-white"
+                    : "hover:bg-amber-400 hover:text-white"
                 }`}
               >
                 {link.name}

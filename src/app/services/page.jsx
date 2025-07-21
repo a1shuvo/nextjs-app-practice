@@ -42,6 +42,8 @@ const ServicesPage = () => {
                 alt={service.service_name}
                 fill
                 className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="p-4">
